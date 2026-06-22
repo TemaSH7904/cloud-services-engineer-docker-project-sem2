@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ===== Этап 1: сборка бинарника =====
-FROM golang:1.17-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 WORKDIR /app
 
