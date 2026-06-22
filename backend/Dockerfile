@@ -20,7 +20,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /app/server ./cmd/api
 
 # ===== Этап 2: финальный образ =====
-FROM alpine:3.19
+FROM alpine:3.20
 
 # ca-certificates — на случай исходящих HTTPS-запросов из приложения.
 RUN apk add --no-cache ca-certificates
